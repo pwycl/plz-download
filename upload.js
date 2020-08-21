@@ -16,9 +16,9 @@ const prefix = process.env.drive?.slice(0,-3).concat("_") || ""
 const webdavUrl = process.env[prefix + 'url'] || process.env.url
 const webdavUsername = process.env[prefix + 'username'] || process.env.username
 const webdavPassword = process.env[prefix + 'password'] || process.env.password
+console.log(webdavUrl)
 
 ~function checkSecret(){
-    console.log(webdavUrl)
     webdavUrl?? console.error(Error("WebDAV url is null"))
     webdavUsername?? console.error(Error("WebDAV username is null"))
     webdavPassword?? console.error(Error("WebDAV password is null"))
