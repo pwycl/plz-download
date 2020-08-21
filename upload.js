@@ -18,6 +18,7 @@ const webdavUsername = process.env[prefix + 'username'] || process.env.username
 const webdavPassword = process.env[prefix + 'password'] || process.env.password
 
 ~function checkSecret(){
+    console.log(webdavUrl)
     webdavUrl?? console.error(Error("WebDAV url is null"))
     webdavUsername?? console.error(Error("WebDAV username is null"))
     webdavPassword?? console.error(Error("WebDAV password is null"))
